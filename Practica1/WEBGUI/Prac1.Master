@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Prac1.master.cs" Inherits="WEBGUI.Prac1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <link rel="stylesheet" href="webapp.css">
+     <title><%: Page.Title %> - Práctica 1 ISW</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body runat="server">
+    <header>Práctica 1 ISW</header>
+    <form id="form1" runat="server">
+        <asp:Menu ID="Menu1" runat="server">
+            <Items>
+                <asp:MenuItem NavigateUrl="~/login.aspx" Text="Inicio" Value="Inicio"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/crearUsuario.aspx" Text="Crear Usuario" Value="Crear Usuario"></asp:MenuItem>
+                <asp:MenuItem Text="Salir" Value="Salir"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+    </form>
+     <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - Luisa Fernanda Meza López||Edgar Alan Cebrero López</p>
+            </footer>
+</body>
+</html>

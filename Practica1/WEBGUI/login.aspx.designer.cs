@@ -10,7 +10,7 @@
 namespace WEBGUI {
     
     
-    public partial class index {
+    public partial class login {
         
         /// <summary>
         /// ImageButton1 control.
@@ -22,6 +22,24 @@ namespace WEBGUI {
         protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
         
         /// <summary>
+        /// errorMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errorMsg;
+        
+        /// <summary>
+        /// notFound control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label notFound;
+        
+        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -29,6 +47,15 @@ namespace WEBGUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
+        /// uNBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox uNBox;
         
         /// <summary>
         /// Label2 control.
@@ -40,21 +67,21 @@ namespace WEBGUI {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// GridView1 control.
+        /// pWBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.TextBox pWBox;
         
         /// <summary>
-        /// infoUsuarios control.
+        /// enter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource infoUsuarios;
+        protected global::System.Web.UI.WebControls.Button enter;
     }
 }
