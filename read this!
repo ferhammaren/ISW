@@ -1,0 +1,22 @@
+Pos, mira...
+Obviamente para usar la base de datos necesitas hacer la conexion verdad?
+Pues eso se hace en el archivo que se llama webconfig, creo que esta en el proyecto de webgui. Ahi buscas 
+una linea que diga connectios creo o connection strings. Aqui dice como se formatea el string para la conexion
+https://www.connectionstrings.com/mysql/
+
+Ya que tienes tu conexion hecha, entonces necesitas la manera de agarrar los datos o ejecutar los queries (en este caso los
+procedimientos almacenados)
+Eso se hace en el proyecto que dice DAL, ahi tenemos nuestra clase Usuario. En esa clase se ponen los metodos con los que
+llamas al procedimiento almacenado. Esta medio enredoso asi que intentare comentarlo para que entiendas que hace cada linea.
+
+Ya que tienes tu DAL de Usuarios, entonces si puedes poner ya en la pagina del proyecto webgui (por ejemplo, index es donde
+estamos desplegando la tabla con la info del usuario) del toolbox de la parte izquierda, en la seccion data, esta una cosa que se llama ObjectDataSource.
+
+Ese objectdatasource es como que tu conector entre el procedimiento almacenado y la tabla. Para poder desplegar en la tabla los datos, necesitas poner tambien de la misma seccion de data, un gridview. Eso no es mas que una tablita que se llena automaticamente con los datos obtenidos de una base de datos. Cuando la pones no tiene columnas definidas, asi que lo que hice fue ponerle las columnas como "bound column" o algo asi, y cuando le agregas una columna, te da la opcion para ponerle un nombre al header de esa columna Y el campo del query del que esa columna toma los datos, se llama algoField xD.
+
+Al poner el objectdatasource, tienes que especificar de donde va a agarrar los metodos. Te sale un menu desplegable y tienes que seleccionar tu DAL. Luego te pone cuales metodos de la DAL son los que vas a usar para insert, delete, select y update.
+Como nuestro select usa parametros, te pone una pantalla en la que te pregunta de donde va a agarrar los parametros. En este caso los agarra de un objeto sesion. Uno para el usuario y otro para el pass. Y sha.
+
+Y asi ya queda. 
+Webconfig->connection string para mysql
+DAL->objectDataSource->Gridview
