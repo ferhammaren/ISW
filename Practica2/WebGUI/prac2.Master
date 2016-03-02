@@ -15,6 +15,9 @@
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
+            <p id="menu">
+                menu placeholder</p>
+        
         </asp:ContentPlaceHolder>
     </div>
     </form>
